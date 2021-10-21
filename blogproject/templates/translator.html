@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>translator</title>
+</head>
+
+<body>
+<form method="POST">{% csrf_token %}
+  
+
+    <input type="text" name="translator" required>
+    <br>
+    <select required name="language">
+<option value="Hindi">Hindi</option> 
+<option value="Marathi">Marathi</option>
+<option value="Telugu">Telugu</option>
+<option value="Tamil">Tamil</option>
+
+
+    </select> 
+
+<br>
+<button type="submit" >translate</button>
+
+
+</form>
+
+
+
+
+
+
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,141 @@
+
+
+
+    {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>add post</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'post,edit/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--============================================={% static 'post,edit/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'post,edit/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--============================================={% static 'post,edit/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'post,edit/vendor/animate/animate.css' %}">
+<!--============================================={% static 'post,edit/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'post,edit/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--============================================={% static 'post,edit/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'post,edit/vendor/animsition/css/animsition.min.css' %}">
+<!--============================================={% static 'post,edit/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'post,edit/vendor/select2/select2.min.css' %}">
+<!--============================================={% static 'post,edit/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'post,edit/vendor/daterangepicker/daterangepicker.css' %}">
+<!--============================================={% static 'post,edit/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'post,edit/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'post,edit/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+    
+	{% if user.is_authenticated %}
+    {% if user.id == 1 %}
+<form  method="POST" enctype="multipart/form-data">{% csrf_token %}
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					create a post here
+				</span>
+
+				<div class="wrap-input100 validate-input" >
+					<div clas="input100" >{{ post.title }}</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<!--<div class="wrap-input100 validate-input" data-validate = "Please enter your email: e@a.x">
+					<input class="input100" type="text" name="email" placeholder="E-mail">
+					<span class="focus-input100"></span>-->
+				</div>
+<center>
+				<div class="wrap-input100 validate-input" >
+					   {{ post.body }} {{ post.media }} 
+                       
+					<span class="focus-input100"></span>
+				</div></center>
+
+                {{ post.Create_at }}
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+							post
+						</span>
+					</button>
+
+
+                    &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="/"><div class="contact100-form-btn">
+						<span>
+							<a href="/"><i class="fas fa-home fa-fw mr-2" aria-hidden="true"></i>
+							<strong style="color: blanchedalmond;">HOME</strong>
+						</span>
+						
+					</div></a>
+
+				</div>
+			</form>
+            {% else %}
+            <a href="/"><div class="contact100-form-btn">
+                <span>
+                    <a href="/"><i class="fas fa-home fa-fw mr-2" aria-hidden="true"></i>
+                    <strong style="color: blanchedalmond;">HOME</strong>
+                </span>
+
+                {% endif %}
+
+            {% else %}
+
+            <a href="/"><div class="contact100-form-btn">
+                <span>
+                    <a href="/"><i class="fas fa-home fa-fw mr-2" aria-hidden="true"></i>
+                    <strong style="color: blanchedalmond;">HOME</strong>
+                </span>
+                
+                {% endif %}
+          
+
+            
+           
+            
+		</div>
+	</div>
+
+</form>
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{% static 'post,edit/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--============={% static 'post,edit/==================================================================================-->
+	<script src="{% static 'post,edit/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--============={% static 'post,edit/==================================================================================-->
+	<script src="{% static 'post,edit/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'post,edit/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--============={% static 'post,edit/==================================================================================-->
+	<script src="{% static 'post,edit/vendor/select2/select2.min.js' %}"></script>
+<!--============={% static 'post,edit/==================================================================================-->
+	<script src="{% static 'post,edit/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'post,edit/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--============={% static 'post,edit/==================================================================================-->
+	<script src="{% static 'post,edit/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--============={% static 'post,edit/==================================================================================-->
+	<script src="{% static 'post,edit/js/main.js' %}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<!--<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>-->
+
+</body>
+</html>

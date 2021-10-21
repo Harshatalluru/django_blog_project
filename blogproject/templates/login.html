@@ -1,0 +1,154 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'loginstyle/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--============================================={% static 'loginstyle/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'loginstyle/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--============================================={% static 'loginstyle/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'loginstyle/vendor/animate/animate.css' %}">
+<!--============================================={% static 'loginstyle/==================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'loginstyle/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--============================================={% static 'loginstyle/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'loginstyle/vendor/select2/select2.min.css' %}">
+<!--============================================={% static 'loginstyle/==================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'loginstyle/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'loginstyle/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{% static 'loginstyle/images/img-01.png' %}" alt="IMG">
+				</div>
+       
+				<form method="POST" >
+					<span class="login100-form-title">
+						<div class="alert">
+							
+							<h6 id="alert"></h6> 
+						  </div>
+						Member Login
+					</span>
+          
+					<div class="wrap-input100 validate-input">
+           
+      
+              
+              
+           
+              
+				<div class="wrap-input100 validate-input" >
+					<input class="input100" placeholder="enter a valid email" {{ form.username }} 
+					<span class="focus-input100"></span>
+					<span class="symbol-input100">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+					</span>
+				</div>
+						 {% csrf_token %}
+						 <div class="wrap-input100 validate-input" >
+							<input class="input100" placeholder="enter a password" {{ form.password }} 
+							<span class="focus-input100"></span>
+							<span class="symbol-input100">
+								<i class="fa  fa-lock" aria-hidden="true"></i>
+							</span>
+						</div>	 
+							
+            </div>
+            
+						
+					
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn closebtn" onclick="document.getElementById('alert')">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="/signup">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+
+
+
+
+<style>
+	.alert {
+		padding: 20px;
+		background-color: green;
+		color: white;
+	  }
+	  
+	  .closebtn {
+		margin-left: 15px;
+		color: white;
+		font-weight: bold;
+		float: right;
+		font-size: 22px;
+		line-height: 20px;
+		cursor: pointer;
+		transition: 0.3s;
+	  }
+	  
+	  .closebtn:hover {
+		color: black;
+	  }
+	  </style>
+
+
+
+<div class="alert">
+	<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	<strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+  </div>
+	
+<!--===============================================================================================-->	
+	<script src="{% static 'loginstyle/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--============={% static 'loginstyle/==================================================================================-->
+	<script src="{% static 'loginstyle/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'loginstyle/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--============={% static 'loginstyle/==================================================================================-->
+	<script src="{% static 'loginstyle/vendor/select2/select2.min.js' %}"></script>
+<!--============={% static 'loginstyle/=============================' %}=====================================================-->
+	<script src="{% static 'loginstyle/vendor/tilt/tilt.jquery.min.j' %}s"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'loginstyle/js/main.js"></script>
+
+</body>
+</html>
